@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume Generator</title>
+</head>
+
+<body>
+    <form>
+        <div class="container" id="cv-form">
+
+            <div class="column ">
+
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="nameField">Your Name</label><br>
+                    <input type="text" id="nameField" name="name" placeholder="Enter here" class="form-control"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactField">Your Contact Number </label><br>
+                    <input type="number" id="contactField" name="contact" placeholder="Enter here" class="form-control"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adressField">Your Address</label><br>
+                    <textarea id="adressField" name="address" placeholder="Enter here" class="form-control" rows="3"
+                        required>
+                </textarea>
+
+                    <h3>Important Links</h3>
+                    <div class="form-group">
+                        <label for="fbField">Facebook </label><br>
+                        <input type="text" id="fbField" name="facebook" placeholder="Enter here" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="instaField">Instagram</label><br>
+                        <input type="text" id="instaField" name="instagram" placeholder="Enter here"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedField">Linked-Inn</label><br>
+                        <input type="text" id="linkedField" name="Linked-Inn" placeholder="Enter here"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailField">E-mail</label><br>
+                        <input type="email" id="emailField" name="email" placeholder="Enter here" class="form-control"
+                            required>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="column">
+                <h3>Professional Information</h3>
+
+                <div class="form-group">
+                    <label for="objectiveField">Objective</label><br>
+                    <textarea id="objectiveField" name="objective" placeholder="Enter here" class="form-control weField"
+                        rows="5" required>
+                </textarea>
+                </div>
+
+                <div class="form-group" id="we">
+                    <label for="adressField">Work Experience</label><br>
+                    <textarea placeholder="Enter here" name="experience" class="form-control weField" rows="3" required>
+                </textarea>
+                    <br>
+                    <div id="weAddButton">
+                        <center><button onclick="addNewWEField()" class="add-btn" type="button">Add</button></center>
+                    </div>
+                    <br>
+                    <!-- new textarea -->
+                    <div class="form-group" id="aq">
+                        <label for="adressField">Academic Qualification</label><br>
+                        <textarea placeholder="Enter here" name="qualification" class="form-control eqField" rows="3"
+                            required>
+                    </textarea>
+                        <br>
+
+                        <div id="aqAddButton">
+                            <center> <button onclick="addNewAQField()" class="add-btn" type="button">Add</button>
+                            </center>
+                        </div>
+                        <br>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+            <button type="submit" onclick="generateCV()" class="generate">
+                Generate CV
+            </button>
+        </div>
+
+    </form>
+
+
+
+    <!-- cv  templete -->
+    <div class="cv-container" id="cv-templete">
+        <div class="flex-templete">
+            <div class="column1">
+                <!-- first column -->
+
+                <!-- <img src="muzammil-img.jpg" alt="" class="my-img"> -->
+
+                <div>
+                    <p id="nameT1">uzma khan</p>
+                    <p id="contactT">+90876544</p>
+                    <p id="adressT">566765/6577/sector karachi,pakistan</p>
+                    <hr>
+
+                    <p><a id="fbT" href="https://www.facebook.com"></a>
+                    </p>
+
+                    <p><a id="instaT" href="https://www.instagram.com>"></a>
+                    </p>
+
+                    <p><a id="linkedT" href="https://www.Linked-Inn.com"></a>
+                    </p>
+
+
+
+                </div>
+            </div>
+
+
+            <div class="column2">
+                <!-- 2nd column -->
+                <h1 class="text-center" id="nameT2">uzma khan
+
+
+                </h1>
+
+
+                <!-- objective -->
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur,
+                            nisi veniam numquam recusandae asperiores repellat pariatur eos omnis dolorem
+                            sunt ipsa perspiciatis. Nisi enim, cumque impedit magnam excepturi ipsam modi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- work exprience -->
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Work Exprience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Maiores, consectetur!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Maiores, consectetur!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Maiores, consectetur!</li> -->
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- academic qualification -->
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Maiores, consectetur!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Maiores, consectetur!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Maiores, consectetur!</li> -->
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex">
+            <div>
+                <button onclick="editCV()" class="templet-btn2">Edit</button>
+            </div>
+
+            <div>
+                <button onclick="printCV()" class="templet-btn2">Print CV</button>
+            </div>
+
+
+
+            <div>
+                <button type="button" class="templet-btn2" id="shareBtn">Share</button>
+                <br><br>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
